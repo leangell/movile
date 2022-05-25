@@ -8,10 +8,11 @@ class Contador extends StatefulWidget {
 }
 
 class _ContadorState extends State<Contador> {
+  int count = 10 ;
   @override
   Widget build(BuildContext context) {
     const siseText =  TextStyle(fontSize: 25);
-    int count = 10 ;
+    
     return Scaffold( 
       appBar: AppBar(
           elevation: 8.0,
@@ -29,11 +30,11 @@ class _ContadorState extends State<Contador> {
           ),
         ), 
         floatingActionButton: FloatingActionButton(
+          child: Icon(Icons.access_alarm),
           onPressed:(){
-            count++;
             showMessage();
             },
-          child: Icon(Icons.access_alarm),
+        
         ) 
         
         
@@ -41,7 +42,10 @@ class _ContadorState extends State<Contador> {
   }
 
   void showMessage(){
-    print('hi, Again');
+   // print('hi, Again');
+    setState(( ) {
+      count++;
+    });
   }
 }
 
