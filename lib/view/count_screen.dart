@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 class Contador extends StatefulWidget {
   const Contador({Key? key}) : super(key: key);
 
@@ -8,7 +7,7 @@ class Contador extends StatefulWidget {
 }
 
 class _ContadorState extends State<Contador> {
-  int count = 10 ;
+  int count = 0 ;
   @override
   Widget build(BuildContext context) {
     const siseText =  TextStyle(fontSize: 25);
@@ -32,7 +31,9 @@ class _ContadorState extends State<Contador> {
         floatingActionButton: FloatingActionButton(
           child: Icon(Icons.access_alarm),
           onPressed:(){
-            showMessage();
+            setState(( ) {
+              count++;
+            });
             },
         
         ) 
@@ -43,9 +44,7 @@ class _ContadorState extends State<Contador> {
 
   void showMessage(){
    // print('hi, Again');
-    setState(( ) {
-      count++;
-    });
+    
   }
 }
 
