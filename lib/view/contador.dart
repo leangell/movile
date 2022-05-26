@@ -41,6 +41,7 @@ class _ConttadorState extends State<Conttador> {
           ),
         ), 
         
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton:floatingCustomw(
           increasefn: increasefn,
           decreasefn: decreasefn,
@@ -67,9 +68,11 @@ class floatingCustomw extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: <Widget>[
-        FloatingActionButton( child: const Icon(Icons.add), onPressed:()=> increasefn()),
-        FloatingActionButton(child: const Icon(Icons.replay), onPressed:() => recetfn()),
-        FloatingActionButton(child: const Icon(Icons.remove), onPressed:() => decreasefn()),
+        
+        Expanded(child: FloatingActionButton(child: const Icon(Icons.add), onPressed:()=> increasefn()),),
+        Expanded(child: FloatingActionButton(child: const Icon(Icons.replay), onPressed:() => recetfn()),),
+        Expanded(child: FloatingActionButton(child: const Icon(Icons.remove), onPressed:() => decreasefn())),
+        
       ]
     );
   }
