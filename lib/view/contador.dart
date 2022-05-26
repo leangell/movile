@@ -41,7 +41,7 @@ class _ConttadorState extends State<Conttador> {
           ),
         ), 
         
-        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
         floatingActionButton:floatingCustomw(
           increasefn: increasefn,
           decreasefn: decreasefn,
