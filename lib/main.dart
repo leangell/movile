@@ -1,8 +1,12 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/view/listview_2.dart';
 //import 'package:flutter_application_1/view/color.dart';
+//import 'package:flutter_application_1/view/contador.dart';
+//import 'package:flutter_application_1/view/count.dart';
+//import 'package:flutter_application_1/view/count_screen.dart';
 //import 'package:flutter_application_1/view/home_view.dart';
-import 'package:flutter_application_1/view/images.dart';
+//import 'package:flutter_application_1/view/images.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +17,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  const MaterialApp(
+    return   MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ImagenLeo(),//MyColor() //HomeView()
+      title: 'Material App',
+      home:  ListView2(), // Conttador()//MyColor() //ImagenLeo(), //HomeView()
     );
   }
 }
