@@ -1,26 +1,32 @@
-
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/view/listview_2.dart';
-//import 'package:flutter_application_1/view/color.dart';
-//import 'package:flutter_application_1/view/contador.dart';
-//import 'package:flutter_application_1/view/count.dart';
-//import 'package:flutter_application_1/view/count_screen.dart';
-//import 'package:flutter_application_1/view/home_view.dart';
-//import 'package:flutter_application_1/view/images.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 
-void main() {
+import 'view/firebase_1.dart';
+import 'view/listview_2.dart';
+
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
-}
+  }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
+  
   @override
   Widget build(BuildContext context) {
-    return   MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Material App',
-      home:  ListView2(), // Conttador()//MyColor() //ImagenLeo(), //HomeView()
+    return  const MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Material App',
+        home: CallFirebase()
     );
   }
 }
+
+
