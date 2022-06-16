@@ -39,6 +39,7 @@ dependencies:
   firebase_analytics: ^9.1.9
   firebase_crashlytics: ^2.8.1
   firebase_database: ^9.0.15
+  lottie: ^1.3.0
 
 dev_dependencies:
   flutter_test:
@@ -68,6 +69,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
   assets:
     - assets/images/
+    - assets/animaciones/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
 
