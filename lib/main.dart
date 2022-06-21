@@ -1,11 +1,13 @@
 import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_database/firebase_database.dart';
+//import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:firebase_crashlytics/firebase_crashlytics.dart';
-import 'package:firebase_analytics/firebase_analytics.dart';
+//import 'package:flutter_application_1/view/jorge.dart';
+//import 'package:firebase_crashlytics/firebase_crashlytics.dart';
+//import 'package:firebase_analytics/firebase_analytics.dart';
 
-import 'view/firebase_1.dart';
-import 'view/listview_2.dart';
+//import 'view/firebase_1.dart';
+import 'view/splassh.dart';
+//import 'view/listview_2.dart';
 
 
 void main() async {
@@ -24,7 +26,7 @@ class MyApp extends StatelessWidget {
     return  const MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Material App',
-        home: CallFirebase()
+        home: Splash()
     );
   }
 }

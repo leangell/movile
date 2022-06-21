@@ -47,7 +47,7 @@ class _CallFirebaseState extends State<CallFirebase> {
           leading: CircleAvatar(
             backgroundImage: NetworkImage(pice[index].image!),
           ),
-          title: Text(pice[index].nombre!+' '+pice[index].apellido!),
+          title: Text('${pice[index].nombre!} ${pice[index].apellido!}'),
           onTap: () {
             openAlertDialog(context, pice[index].carro.toString());
           },
@@ -58,11 +58,30 @@ class _CallFirebaseState extends State<CallFirebase> {
 
   void callDatabase() async {
     final res = await firebaseConnection.getRegisters();
-    if(pice.length==0) {
-
+    if(pice.length == 0) {
     setState(( ) {
       pice=res.registros!;
     });
   }
 }
+}
+
+
+class CardCustom extends StatelessWidget{
+  const CardCustom ({Key? key}): super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return const Center(
+      child:  Card(
+        elevation: 2,
+        color: Color.fromARGB(232, 151, 143, 143),
+        child: SizedBox(
+                              width: 370,
+                              height:120,
+                              child: Center(child: Text('Clean Car'))),
+      )
+    );
+  }
+
 }

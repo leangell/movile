@@ -15,9 +15,9 @@ class Home extends State<Splash> {
   @override
   void initState() {
     //set time to load the new page
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed(const Duration(seconds: 4), () {
       Navigator.pushReplacement(
-          context, MaterialPageRoute(builder: (context) => Menu()));
+          context, MaterialPageRoute(builder: (context) => const Menu()));
     });
     super.initState();
   }
@@ -35,7 +35,7 @@ class Home extends State<Splash> {
             SizedBox(
                 height: 300,
                 width: 300,
-                child: Lottie.asset('assets/animations/anim_carwash.json')),
+                child: Lottie.asset('assets/animaciones/carw.json')),
             const SizedBox(height: 20),
             const Text(
               "CarWash",
